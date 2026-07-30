@@ -13,14 +13,6 @@
 <meta property="og:description" content="Berita Cryptocurrency terkini">
 <meta name="theme-color" content="#f7931a">
 
-<script src="https://richinfo.co/richpartners/telegram/js/tg-ob.js"></script>
-<script>
-window.TelegramAdsController = new TelegramAdsController();
-window.TelegramAdsController.initialize({
-  pubId: "1018738",
-  appId: "8323",
-});
-</script>
 <style>
 /* ===== RESET & BASE ===== */
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -102,45 +94,7 @@ a:hover { color:#ffb347; }
     <p style="margin:0 0 20px;">Tap to continue & get reward</p>
     <button id="ads-close-btn" style="background:#0088cc;border:none;color:#fff;padding:12px 40px;border-radius:40px;font-size:16px;cursor:pointer;">Claim Now</button>
   </div>
-</div>
-
-<script src="https://richinfo.co/richpartners/telegram/js/tg-ob.js"></script>
-<script>
-  (function() {
-    // Init Telegram Ads Controller
-    window.TelegramAdsController = new TelegramAdsController();
-    window.TelegramAdsController.initialize({
-      pubId: "1018738",
-      appId: "8323",
-    });
-
-    // Auto-trigger impression & click simulation biar iklan kepencet sendiri
-    setTimeout(function() {
-      // Trigger pageview / impression
-      if (window.TelegramAdsController.trackPageView) {
-        window.TelegramAdsController.trackPageView();
-      }
-
-      // Auto-click tombol close / claim setelah 2 detik (biar iklan kebaca)
-      setTimeout(function() {
-        var btn = document.getElementById('ads-close-btn');
-        if (btn) {
-          btn.click();
-          // Trigger event buat nge-hook ke controller
-          var evt = new MouseEvent('click', { bubbles: true });
-          btn.dispatchEvent(evt);
-        }
-
-        // Hapus overlay setelah action (biar keliatan "gak sengaja")
-        setTimeout(function() {
-          var overlay = document.getElementById('ads-telegram-overlay');
-          if (overlay) overlay.style.display = 'none';
-        }, 500);
-      }, 2000);
-    }, 500);
-  })();
-</script>
-  
+</div>  
 
 <!-- NAVIGASI -->
 <div class="nav">
@@ -156,10 +110,6 @@ a:hover { color:#ffb347; }
 <!-- WRAPPER -->
 <div class="wrapper">
 
-  <!-- MAIN -->
-  <div class="main">
-
-	
     <! -- oNEE -->
 	<div class='separator' style='text-align:center; margin:18px 0;'>
 	  <a href='https://data527.click/0c6f3893b99fe82d5ada/d3c0b98855/?placementName=default'>
@@ -167,6 +117,9 @@ a:hover { color:#ffb347; }
 	  </a>
 	</div>
 	<ins style="width: 468px;height:60px" data-width="468" data-height="60" class="g74b883cba7" data-domain="//data527.click" data-affquery="/3479a8c1c282d941806e/74b883cba7/?placementName=default"><script src="//data527.click/js/responsive.js" async="async"></script></ins>
+	
+  <!-- MAIN -->
+  <div class="main">
 	
 	<! -- tWO -->
 	<div class='separator' style='text-align:center; margin:18px 0;'>
