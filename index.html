@@ -3,109 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viomagz - HTML Standalone</title>
+    <title>viomagz - Blog Template</title>
 
+    <!-- Google Font Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /* ===== INI CSS DARI TEMPLATE LO, GUE KASIH SEMUA ===== */
+        @font-face{font-family:Roboto;font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fCRc4EsA.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Roboto;font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fABc4EsA.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Roboto;font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fCBc4EsA.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:Roboto;font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:Roboto;font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fCxc4EsA.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:Roboto;font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Roboto;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfCRc4EsA.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Roboto;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfABc4EsA.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Roboto;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfCBc4EsA.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:Roboto;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBxc4EsA.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:Roboto;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:Roboto;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+        html { font-family: Roboto, Arial, sans-serif; }
         body {
-            font-family: 'Roboto', Arial, sans-serif;
             background: #ffffff;
             color: #575757;
-            line-height: 1.6;
-            padding-top: 82px;
-        }
-        a {
-            color: #1B699D;
-            text-decoration: none;
-        }
-        a:hover {
-            color: #595959;
-            text-decoration: underline;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        .clearfix::after {
-            content: "";
-            display: table;
-            clear: both;
+            font-family: Roboto, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+            overflow-y: scroll;
+            position: relative;
         }
 
+        /* DIMENSI */
+        #header-wrapper, #wrapper, #footer-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        #header-container, #header-inner {
+            height: 52px;
+        }
+        .header img { max-height: 52px; }
+        h1.title, h2.title {
+            line-height: 52px;
+        }
+        #wrapper {
+            padding-top: 82px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-bottom: 30px;
+            background: #ffffff;
+        }
+
+        /* WARNA LINK */
+        a:link { color: #1B699D; }
+        a:visited { color: #1B699D; }
+        a:hover { color: #595959; text-decoration: underline; }
+
+        /* HEADER */
         #header-container {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
+            width: 100%;
             z-index: 999;
             background: #137FAA;
-            height: 52px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         #header-wrapper {
-            max-width: 1000px;
+            padding-left: 30px;
+            padding-right: 30px;
+            position: relative;
             margin: 0 auto;
-            padding: 0 30px;
-            height: 52px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        }
+        #header-wrapper::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .header {
+            max-width: 400px;
+            float: left;
+            margin-right: 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         .header h1.title {
-            font-size: 22px;
-            color: #ffffff;
+            font-size: 25px;
             margin: 0;
             text-transform: uppercase;
-            line-height: 52px;
+            color: #ffffff;
         }
         .header h1.title a {
             color: #ffffff;
-        }
-        .header h1.title a:hover {
             text-decoration: none;
         }
+        .header .description {
+            display: none;
+        }
 
+        /* NAVIGASI */
+        #cssmenu {
+            text-align: left;
+            float: left;
+        }
         #cssmenu ul {
-            list-style: none;
-            display: flex;
-            gap: 10px;
             margin: 0;
             padding: 0;
+            list-style: none;
+            display: flex;
+        }
+        #cssmenu ul li {
+            list-style: none;
+            float: left;
         }
         #cssmenu ul li a {
             color: #ffffff;
-            font-weight: bold;
             font-size: 14px;
+            font-weight: bold;
+            padding: 0 17px;
+            letter-spacing: 0.8px;
+            text-decoration: none;
             text-transform: uppercase;
-            padding: 0 12px;
             line-height: 52px;
             display: block;
         }
         #cssmenu ul li a:hover {
+            background: rgba(64,64,64,0.1);
             color: #ffffff;
-            background: rgba(255,255,255,0.1);
             text-decoration: none;
+        }
+
+        /* SEARCH ICON */
+        .search-icon {
+            position: absolute;
+            top: calc(50% - 12px);
+            right: 0px;
         }
         .search-icon a {
             color: #ffffff;
             font-size: 22px;
-            line-height: 52px;
-        }
-        .search-icon a:hover {
             text-decoration: none;
         }
 
+        /* WRAPPER & POST */
         #wrapper {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px 30px 30px;
-            background: #ffffff;
+            overflow: hidden;
         }
 
         #post-wrapper {
@@ -117,101 +150,136 @@
             float: right;
             width: 30%;
         }
+
         .post {
             margin-bottom: 30px;
         }
-        .post-title {
-            font-size: 22px;
+        .post::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        h2.post-title {
+            font-size: 20px;
             margin: 0 0 10px;
         }
-        .post-title a {
+        h2.post-title a {
             color: #595959;
-        }
-        .post-title a:hover {
-            color: #1B699D;
             text-decoration: none;
         }
+        h2.post-title a:hover {
+            color: #1B699D;
+        }
+
         .post-meta {
             font-size: 14px;
             color: #888;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
         .post-body {
             font-size: 16px;
             line-height: 1.7;
         }
-        .post-body p {
-            margin: 0 0 16px;
+
+        .img-thumbnail-wrap {
+            position: relative;
+            float: left;
+            width: 39%;
+            margin-top: 3px;
+            overflow: hidden;
         }
-        .read-more {
+        .img-thumbnail {
+            width: 100%;
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            height: 0;
+            padding-top: 56.25%;
+        }
+        .img-thumbnail img {
+            width: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        .post-snippet {
+            margin-left: 42%;
+        }
+        .read-more-link {
             display: inline-block;
-            margin-top: 8px;
             font-weight: bold;
             color: #1B699D;
         }
-        .read-more:hover {
-            text-decoration: underline;
-        }
 
-        .sidebar .widget {
-            margin-bottom: 30px;
-        }
-        .sidebar .widget h2 {
-            font-size: 16px;
+        /* SIDEBAR */
+        #sidebar-wrapper h2 {
+            font-size: 15px;
             text-transform: uppercase;
-            margin-bottom: 12px;
-            border-left: 4px solid #137FAA;
-            padding-left: 10px;
+            margin: 0 0 20px;
+            display: inline-block;
         }
-        .sidebar .widget ul {
+        #sidebar-wrapper ul, #sidebar-wrapper ol {
             list-style: none;
+            margin: 0;
             padding: 0;
         }
-        .sidebar .widget ul li {
-            padding: 6px 0;
-            border-bottom: 1px solid #f0f0f0;
+        #sidebar-wrapper li {
+            margin: 0 0 10px;
+            padding: 0;
+            border-left: 5px solid rgba(78,78,78,0.1);
+            padding-left: 6px;
         }
-        .sidebar .widget ul li a {
-            color: #1B699D;
-        }
-        .sidebar .widget ul li a:hover {
-            color: #595959;
+        #sidebar-wrapper .widget {
+            margin: 0 0 30px;
+            clear: both;
         }
 
         .popular-post {
+            margin-bottom: 15px;
             display: flex;
             gap: 12px;
-            margin-bottom: 16px;
             align-items: flex-start;
         }
         .popular-post-thumbnail {
             flex: 0 0 80px;
+            border-radius: 4px;
+            overflow: hidden;
         }
         .popular-post-thumbnail img {
             width: 80px;
             height: 80px;
             object-fit: cover;
-            border-radius: 4px;
-        }
-        .popular-post-info {
-            flex: 1;
+            display: block;
         }
         .popular-post-title {
             font-weight: bold;
             font-size: 14px;
         }
         .popular-post-snippet {
-            font-size: 13px;
-            color: #777;
+            font-size: 12px;
+            opacity: 0.925;
             margin-top: 4px;
         }
 
+        .list-label-widget-content ul {
+            column-count: 2;
+            column-gap: 8px;
+        }
+        .list-label-widget-content ul li {
+            padding: 5px 0;
+            margin: 0;
+        }
+
+        /* FOOTER */
         #footer-container {
             background: #222222;
             color: #dddddd;
             text-align: center;
             padding: 20px 10px;
-            font-size: 13px;
+            font-size: 12px;
         }
         #footer-container a {
             color: #dddddd;
@@ -220,6 +288,7 @@
             color: #ffffff;
         }
 
+        /* RESPONSIVE */
         @media (max-width: 800px) {
             #post-wrapper, #sidebar-wrapper {
                 float: none;
@@ -227,37 +296,41 @@
                 padding-right: 0;
             }
             #header-wrapper {
-                padding: 0 15px;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .header {
+                position: absolute;
+                top: 0;
+                left: 50px;
+                right: 50px;
+                z-index: 1;
+                text-align: center;
+                float: none;
+                max-width: 100%;
+                margin-right: 0;
             }
             #cssmenu ul {
                 display: none;
             }
-            .search-icon {
-                display: none;
-            }
         }
         @media (max-width: 480px) {
-            body {
-                padding-top: 60px;
-            }
-            #header-container {
-                height: 48px;
-            }
-            #header-wrapper {
-                height: 48px;
-            }
-            .header h1.title {
-                font-size: 18px;
-                line-height: 48px;
-            }
             #wrapper {
-                padding: 15px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .post-snippet {
+                margin-left: 0;
+            }
+            .img-thumbnail-wrap {
+                width: 100%;
+                margin-bottom: 15px;
             }
         }
 
         .lazyload {
+            transition: opacity 200ms ease-in-out;
             opacity: 0;
-            transition: opacity 0.3s;
         }
         .lazyload.loaded {
             opacity: 1;
@@ -269,7 +342,7 @@
     <div id="header-container">
         <div id="header-wrapper">
             <div class="header">
-                <h1 class="title"><a href="index.html">Viomagz</a></h1>
+                <h1 class="title"><a href="index.html">viomagz</a></h1>
             </div>
             <nav id="cssmenu">
                 <ul>
@@ -284,18 +357,20 @@
         </div>
     </div>
 
-    <div id="wrapper" class="clearfix">
-
+    <div id="wrapper">
         <div id="post-wrapper">
             <div class="post-container">
 
-                <div class="featured-outer" style="margin-bottom:30px;">
-                    <h2 style="font-size:16px;text-transform:uppercase;margin-bottom:12px;">Featured Post</h2>
-                    <div style="position:relative;background:#f5f5f5;border-radius:6px;overflow:hidden;">
-                        <img src="https://via.placeholder.com/945x400/137FAA/ffffff?text=Featured+Image" alt="Featured" style="width:100%;display:block;">
-                        <div style="position:absolute;bottom:15px;left:15px;right:15px;background:rgba(255,255,255,0.9);padding:12px 18px;border-radius:6px;">
-                            <h3 style="margin:0 0 6px;font-size:22px;"><a href="#" style="color:#595959;">Judul Artikel Unggulan</a></h3>
-                            <p style="margin:0;font-size:15px;">Cuplikan singkat artikel unggulan yang menarik perhatian pembaca.</p>
+                <!-- Featured Post -->
+                <div class="featured-outer" style="margin-bottom:30px;clear:both;">
+                    <div class="latest-post-title">
+                        <h2 style="font-size:15px;text-transform:uppercase;margin:0 0 20px;display:inline-block;">Featured Post</h2>
+                    </div>
+                    <div style="position:relative;border-radius:4px;overflow:hidden;">
+                        <img src="https://1.bp.blogspot.com/-aR5w9KXuWGU/XhSDNRAVuhI/AAAAAAAAHG8/dLxcaZxSgh0v85JG0mWRMQyEwqMgpL1_gCLcBGAsYHQ/w675-h400-n-k-no-nu/no-image.jpg" alt="Featured" style="width:100%;display:block;">
+                        <div style="position:absolute;bottom:15px;left:15px;right:15px;background:rgba(255,255,255,0.9);padding:10px 15px;border-radius:4px;">
+                            <h3 style="margin:0 0 5px;font-size:24px;"><a href="#" style="color:#595959;text-decoration:none;">Judul Artikel Unggulan</a></h3>
+                            <p style="margin:0;">Cuplikan singkat artikel unggulan yang menarik perhatian pembaca.</p>
                         </div>
                     </div>
                 </div>
@@ -304,51 +379,85 @@
 
                     <div class="post-outer">
                         <article class="post">
+                            <div class="img-thumbnail-wrap">
+                                <div class="img-thumbnail">
+                                    <a href="#">
+                                        <img class="lazyload" data-src="https://1.bp.blogspot.com/-aR5w9KXuWGU/XhSDNRAVuhI/AAAAAAAAHG8/dLxcaZxSgh0v85JG0mWRMQyEwqMgpL1_gCLcBGAsYHQ/w288-h162-n-k-no-nu/no-image.jpg" alt="Judul Artikel Pertama" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAD6AAAA+gBtXtSawAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAYSURBVCiRY0xISOBgoAAwUaJ51IBhYwAAuQABOsYCprwAAAAASUVORK5CYII=" width="288" height="162">
+                                    </a>
+                                </div>
+                            </div>
                             <h2 class="post-title"><a href="#">Judul Artikel Pertama</a></h2>
-                            <div class="post-meta">
-                                <span>Oleh Admin</span> &bull; <span>30 Juli 2026</span> &bull; <span>3 Komentar</span>
+                            <div class="post-snippet">
+                                <div class="post-body">
+                                    <p>Ini adalah cuplikan dari artikel pertama. Konten ini bisa berupa paragraf pembuka yang menarik untuk mengajak pembaca membaca lebih lanjut.</p>
+                                    <a href="#" class="read-more-link">Baca Selengkapnya <span class="screen-reader-text">Judul Artikel Pertama</span></a>
+                                </div>
                             </div>
-                            <div class="post-body">
-                                <p>Ini adalah cuplikan dari artikel pertama. Konten ini bisa berupa paragraf pembuka yang menarik untuk mengajak pembaca membaca lebih lanjut.</p>
-                                <a href="#" class="read-more">Baca Selengkapnya &rarr;</a>
+                            <div class="post-info info-1" style="margin-top:10px;font-size:14px;margin-left:42%;">
+                                <span>Oleh Admin</span> <span style="padding:0 2px;">—</span>
+                                <span>30 Juli 2026</span> <span style="padding:0 2px;">—</span>
+                                <span>3 Komentar</span>
                             </div>
                         </article>
                     </div>
 
                     <div class="post-outer">
                         <article class="post">
+                            <div class="img-thumbnail-wrap">
+                                <div class="img-thumbnail">
+                                    <a href="#">
+                                        <img class="lazyload" data-src="https://1.bp.blogspot.com/-aR5w9KXuWGU/XhSDNRAVuhI/AAAAAAAAHG8/dLxcaZxSgh0v85JG0mWRMQyEwqMgpL1_gCLcBGAsYHQ/w288-h162-n-k-no-nu/no-image.jpg" alt="Judul Artikel Kedua" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAD6AAAA+gBtXtSawAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAYSURBVCiRY0xISOBgoAAwUaJ51IBhYwAAuQABOsYCprwAAAAASUVORK5CYII=" width="288" height="162">
+                                    </a>
+                                </div>
+                            </div>
                             <h2 class="post-title"><a href="#">Judul Artikel Kedua</a></h2>
-                            <div class="post-meta">
-                                <span>Oleh Admin</span> &bull; <span>29 Juli 2026</span> &bull; <span>5 Komentar</span>
+                            <div class="post-snippet">
+                                <div class="post-body">
+                                    <p>Cuplikan artikel kedua. Di sini kamu bisa menaruh ringkasan atau teaser untuk membuat pembaca penasaran dan klik baca selengkapnya.</p>
+                                    <a href="#" class="read-more-link">Baca Selengkapnya <span class="screen-reader-text">Judul Artikel Kedua</span></a>
+                                </div>
                             </div>
-                            <div class="post-body">
-                                <p>Cuplikan artikel kedua. Di sini kamu bisa menaruh ringkasan atau teaser untuk membuat pembaca penasaran dan klik baca selengkapnya.</p>
-                                <a href="#" class="read-more">Baca Selengkapnya &rarr;</a>
+                            <div class="post-info info-1" style="margin-top:10px;font-size:14px;margin-left:42%;">
+                                <span>Oleh Admin</span> <span style="padding:0 2px;">—</span>
+                                <span>29 Juli 2026</span> <span style="padding:0 2px;">—</span>
+                                <span>5 Komentar</span>
                             </div>
                         </article>
                     </div>
 
                     <div class="post-outer">
                         <article class="post">
-                            <h2 class="post-title"><a href="#">Judul Artikel Ketiga</a></h2>
-                            <div class="post-meta">
-                                <span>Oleh Admin</span> &bull; <span>28 Juli 2026</span> &bull; <span>2 Komentar</span>
+                            <div class="img-thumbnail-wrap">
+                                <div class="img-thumbnail">
+                                    <a href="#">
+                                        <img class="lazyload" data-src="https://1.bp.blogspot.com/-aR5w9KXuWGU/XhSDNRAVuhI/AAAAAAAAHG8/dLxcaZxSgh0v85JG0mWRMQyEwqMgpL1_gCLcBGAsYHQ/w288-h162-n-k-no-nu/no-image.jpg" alt="Judul Artikel Ketiga" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAD6AAAA+gBtXtSawAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAYSURBVCiRY0xISOBgoAAwUaJ51IBhYwAAuQABOsYCprwAAAAASUVORK5CYII=" width="288" height="162">
+                                    </a>
+                                </div>
                             </div>
-                            <div class="post-body">
-                                <p>Artikel ketiga dengan gaya penulisan yang ringan dan informatif. Cocok untuk berbagai topik seperti teknologi, gaya hidup, atau tutorial.</p>
-                                <a href="#" class="read-more">Baca Selengkapnya &rarr;</a>
+                            <h2 class="post-title"><a href="#">Judul Artikel Ketiga</a></h2>
+                            <div class="post-snippet">
+                                <div class="post-body">
+                                    <p>Artikel ketiga dengan gaya penulisan yang ringan dan informatif. Cocok untuk berbagai topik seperti teknologi, gaya hidup, atau tutorial.</p>
+                                    <a href="#" class="read-more-link">Baca Selengkapnya <span class="screen-reader-text">Judul Artikel Ketiga</span></a>
+                                </div>
+                            </div>
+                            <div class="post-info info-1" style="margin-top:10px;font-size:14px;margin-left:42%;">
+                                <span>Oleh Admin</span> <span style="padding:0 2px;">—</span>
+                                <span>28 Juli 2026</span> <span style="padding:0 2px;">—</span>
+                                <span>2 Komentar</span>
                             </div>
                         </article>
                     </div>
 
                 </div>
 
-                <div style="text-align:center;padding:20px 0;clear:both;">
-                    <span style="background:#f0f0f0;padding:8px 14px;border-radius:4px;display:inline-block;margin:0 4px;">&laquo; Prev</span>
-                    <span style="background:#137FAA;color:#fff;padding:8px 14px;border-radius:4px;display:inline-block;margin:0 4px;">1</span>
-                    <span style="background:#f0f0f0;padding:8px 14px;border-radius:4px;display:inline-block;margin:0 4px;">2</span>
-                    <span style="background:#f0f0f0;padding:8px 14px;border-radius:4px;display:inline-block;margin:0 4px;">3</span>
-                    <span style="background:#f0f0f0;padding:8px 14px;border-radius:4px;display:inline-block;margin:0 4px;">Next &raquo;</span>
+                <!-- Pagination -->
+                <div id="blog-pager" style="font-size:14px;clear:both;overflow:hidden;padding:20px 0;text-align:center;">
+                    <span style="background:rgba(195,195,195,0.15);border-radius:4px;padding:8px 12px;margin:2px 3px 2px 0;display:inline-block;">&laquo; Prev</span>
+                    <span style="background:#137FAA;color:#fff;border-radius:4px;padding:8px 12px;margin:2px 3px 2px 0;display:inline-block;">1</span>
+                    <span style="background:rgba(195,195,195,0.15);border-radius:4px;padding:8px 12px;margin:2px 3px 2px 0;display:inline-block;">2</span>
+                    <span style="background:rgba(195,195,195,0.15);border-radius:4px;padding:8px 12px;margin:2px 3px 2px 0;display:inline-block;">3</span>
+                    <span style="background:rgba(195,195,195,0.15);border-radius:4px;padding:8px 12px;margin:2px 3px 2px 0;display:inline-block;">Next &raquo;</span>
                 </div>
 
             </div>
@@ -361,8 +470,8 @@
                     <div class="widget">
                         <h2>Cari Blog Ini</h2>
                         <div style="display:flex;gap:6px;">
-                            <input type="text" placeholder="Cari..." style="flex:1;padding:8px 12px;border:1px solid #ddd;border-radius:4px;">
-                            <button style="background:#137FAA;color:#fff;border:none;padding:8px 16px;border-radius:4px;cursor:pointer;">Cari</button>
+                            <input type="text" placeholder="Cari..." style="flex:1;padding:6px 8px;border:1px solid rgba(51,51,51,0.15);border-radius:4px;">
+                            <button style="background:#137FAA;color:#fff;border:none;padding:6px 12px;border-radius:4px;cursor:pointer;">Cari</button>
                         </div>
                     </div>
 
@@ -370,7 +479,7 @@
                         <h2>Popular Posts</h2>
                         <div class="popular-post">
                             <div class="popular-post-thumbnail">
-                                <img src="https://via.placeholder.com/80x80/cccccc/ffffff?text=1" alt="thumb">
+                                <img src="https://1.bp.blogspot.com/-aR5w9KXuWGU/XhSDNRAVuhI/AAAAAAAAHG8/dLxcaZxSgh0v85JG0mWRMQyEwqMgpL1_gCLcBGAsYHQ/w80/no-image.jpg" alt="thumb">
                             </div>
                             <div class="popular-post-info">
                                 <div class="popular-post-title"><a href="#">Tips Menulis Efektif</a></div>
@@ -379,7 +488,7 @@
                         </div>
                         <div class="popular-post">
                             <div class="popular-post-thumbnail">
-                                <img src="https://via.placeholder.com/80x80/cccccc/ffffff?text=2" alt="thumb">
+                                <img src="https://1.bp.blogspot.com/-aR5w9KXuWGU/XhSDNRAVuhI/AAAAAAAAHG8/dLxcaZxSgh0v85JG0mWRMQyEwqMgpL1_gCLcBGAsYHQ/w80/no-image.jpg" alt="thumb">
                             </div>
                             <div class="popular-post-info">
                                 <div class="popular-post-title"><a href="#">Cara Belajar Coding</a></div>
@@ -388,7 +497,7 @@
                         </div>
                         <div class="popular-post">
                             <div class="popular-post-thumbnail">
-                                <img src="https://via.placeholder.com/80x80/cccccc/ffffff?text=3" alt="thumb">
+                                <img src="https://1.bp.blogspot.com/-aR5w9KXuWGU/XhSDNRAVuhI/AAAAAAAAHG8/dLxcaZxSgh0v85JG0mWRMQyEwqMgpL1_gCLcBGAsYHQ/w80/no-image.jpg" alt="thumb">
                             </div>
                             <div class="popular-post-info">
                                 <div class="popular-post-title"><a href="#">Review Gadget Terbaru</a></div>
@@ -399,43 +508,50 @@
 
                     <div class="widget">
                         <h2>Label</h2>
-                        <ul>
-                            <li><a href="#">Teknologi</a></li>
-                            <li><a href="#">Gaya Hidup</a></li>
-                            <li><a href="#">Tutorial</a></li>
-                            <li><a href="#">Review</a></li>
-                            <li><a href="#">Tips & Trik</a></li>
-                        </ul>
+                        <div class="list-label-widget-content">
+                            <ul>
+                                <li><a href="#">Teknologi</a></li>
+                                <li><a href="#">Gaya Hidup</a></li>
+                                <li><a href="#">Tutorial</a></li>
+                                <li><a href="#">Review</a></li>
+                                <li><a href="#">Tips &amp; Trik</a></li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="widget">
-                        <h2>Tentang Saya</h2>
-                        <div style="text-align:center;">
-                            <img src="https://via.placeholder.com/100x100/137FAA/ffffff?text=Avatar" style="border-radius:50%;width:100px;height:100px;object-fit:cover;margin-bottom:10px;">
-                            <p style="font-size:14px;">Nama Admin<br><span style="color:#888;">Blogger &amp; Content Creator</span></p>
-                            <p style="font-size:13px;color:#666;">Suka berbagi informasi bermanfaat seputar teknologi dan gaya hidup.</p>
+                        <h2>Mengenai Saya</h2>
+                        <div style="background:rgba(195,195,195,0.08);border-radius:4px;padding:30px 25px;text-align:center;">
+                            <div style="width:100px;height:100px;border-radius:50px;overflow:hidden;margin:0 auto;">
+                                <img src="https://1.bp.blogspot.com/-aR5w9KXuWGU/XhSDNRAVuhI/AAAAAAAAHG8/dLxcaZxSgh0v85JG0mWRMQyEwqMgpL1_gCLcBGAsYHQ/w100/no-image.jpg" alt="Avatar" style="width:100%;display:block;">
+                            </div>
+                            <div style="margin-top:10px;">
+                                <div style="font-size:20px;font-weight:bold;">Nama Admin</div>
+                                <div style="font-size:14px;color:#888;">Blogger &amp; Content Creator</div>
+                                <div style="font-size:13px;color:#666;margin-top:8px;">Suka berbagi informasi bermanfaat seputar teknologi dan gaya hidup.</div>
+                                <a href="#" style="display:inline-block;margin-top:15px;background:#137FAA;color:#fff;padding:6px 15px;border-radius:4px;text-decoration:none;">Lihat Profil</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
         </aside>
-
     </div>
 
     <div id="footer-container">
-        &copy; 2026 - <a href="index.html">Viomagz</a> &bull; All rights reserved.
+        &copy; 2020 - <a href="index.html">viomagz</a>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            let images = document.querySelectorAll("img.lazyload");
+            var images = document.querySelectorAll("img.lazyload");
             if ("IntersectionObserver" in window) {
-                let observer = new IntersectionObserver(function(entries) {
+                var observer = new IntersectionObserver(function(entries) {
                     entries.forEach(function(entry) {
                         if (entry.isIntersecting) {
-                            let img = entry.target;
-                            let src = img.getAttribute("data-src");
+                            var img = entry.target;
+                            var src = img.getAttribute("data-src");
                             if (src) {
                                 img.src = src;
                                 img.removeAttribute("data-src");
@@ -450,7 +566,7 @@
                 });
             } else {
                 images.forEach(function(img) {
-                    let src = img.getAttribute("data-src");
+                    var src = img.getAttribute("data-src");
                     if (src) {
                         img.src = src;
                         img.removeAttribute("data-src");
