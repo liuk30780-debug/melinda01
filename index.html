@@ -1,581 +1,302 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>viomagz - Blog Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CryptoInsight - Berita Crypto</title>
+<!-- ===== META CRYPTO ===== -->
+<meta name="description" content="Berita Cryptocurrency, Bitcoin, Ethereum, Altcoin, DeFi, NFT terkini">
+<meta name="keywords" content="Crypto, Bitcoin, Ethereum, Altcoin, DeFi, NFT, Blockchain">
+<meta property="og:title" content="CryptoInsight - Berita Crypto">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://liuk30780-debug.github.io/">
+<meta property="og:description" content="Berita Cryptocurrency terkini">
+<meta name="theme-color" content="#f7931a">
 
-    <!-- Google Font Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<script src="https://richinfo.co/richpartners/telegram/js/tg-ob.js"></script>
+<script>
+window.TelegramAdsController = new TelegramAdsController();
+window.TelegramAdsController.initialize({
+  pubId: "1018738",
+  appId: "8323",
+});
+</script>
+<style>
+/* ===== RESET & BASE ===== */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#0b0e14; color:#d6dee7; font-family: Arial, sans-serif; line-height:1.7; }
+a { color:#f7931a; text-decoration:none; }
+a:hover { color:#ffb347; }
 
-    <style>
-        /* ===== INI CSS DARI TEMPLATE LO, GUE KASIH SEMUA ===== */
-        @font-face{font-family:Roboto;font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fCRc4EsA.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Roboto;font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fABc4EsA.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Roboto;font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fCBc4EsA.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:Roboto;font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:Roboto;font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fCxc4EsA.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:Roboto;font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Roboto;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfCRc4EsA.woff2) format('woff2');unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Roboto;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfABc4EsA.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Roboto;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfCBc4EsA.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:Roboto;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBxc4EsA.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:Roboto;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:Roboto;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format('woff2');unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Roboto;font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* ===== HEADER ===== */
+.header { background:#111821; border-bottom:3px solid #f7931a; padding:20px 15px; text-align:center; }
+.header h1 { font-size:28px; font-weight:800; color:#f7931a; text-transform:uppercase; letter-spacing:1px; }
+.header .desc { color:#8896a8; font-size:13px; margin-top:3px; }
 
-        html { font-family: Roboto, Arial, sans-serif; }
-        body {
-            background: #ffffff;
-            color: #575757;
-            font-family: Roboto, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.5;
-            overflow-y: scroll;
-            position: relative;
-        }
+/* ===== NAVIGASI ===== */
+.nav { background:#141b24; padding:10px 15px; border-bottom:1px solid #1f2937; text-align:center; overflow-x:auto; white-space:nowrap; }
+.nav a { color:#b0c4d8; font-size:12px; font-weight:600; padding:4px 14px; border-radius:30px; border:1px solid transparent; display:inline-block; margin:2px; text-transform:uppercase; }
+.nav a:hover, .nav a.active { color:#0b0e14; background:#f7931a; border-color:#f7931a; }
 
-        /* DIMENSI */
-        #header-wrapper, #wrapper, #footer-wrapper {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        #header-container, #header-inner {
-            height: 52px;
-        }
-        .header img { max-height: 52px; }
-        h1.title, h2.title {
-            line-height: 52px;
-        }
-        #wrapper {
-            padding-top: 82px;
-            padding-left: 30px;
-            padding-right: 30px;
-            padding-bottom: 30px;
-            background: #ffffff;
-        }
+/* ===== WRAPPER ===== */
+.wrapper { max-width:1100px; margin:0 auto; padding:20px; }
+.main { float:left; width:65%; }
+.sidebar { float:right; width:32%; }
+.clear { clear:both; }
+@media screen and (max-width:880px){ .main, .sidebar { float:none; width:100%; } }
 
-        /* WARNA LINK */
-        a:link { color: #1B699D; }
-        a:visited { color: #1B699D; }
-        a:hover { color: #595959; text-decoration: underline; }
+/* ===== POST CARD ===== */
+.post { background:#111a24; border:1px solid #1f2937; border-radius:16px; padding:22px; margin-bottom:25px; }
+.post:hover { border-color:#f7931a; }
+.post .tag { display:inline-block; background:#f7931a; color:#0b0e14; border-radius:40px; padding:2px 14px; font-weight:700; text-transform:uppercase; font-size:11px; margin:0 2px 8px 0; }
+.post h2 { color:#e6edf5; font-size:22px; margin-bottom:10px; }
+.post h2 a { color:#e6edf5; }
+.post h2 a:hover { color:#f7931a; }
+.post-body { color:#c8d2de; font-size:15px; line-height:1.8; }
+.post-body img { width:100%; border-radius:12px; margin:10px 0; }
+.post-body p { margin-bottom:1em; }
+.read-more { display:inline-block; background:#f7931a; color:#0b0e14; padding:5px 18px; border-radius:30px; font-weight:700; font-size:13px; margin-top:8px; }
+.read-more:hover { background:#ffb347; color:#0b0e14; }
 
-        /* HEADER */
-        #header-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            z-index: 999;
-            background: #137FAA;
-        }
-        #header-wrapper {
-            padding-left: 30px;
-            padding-right: 30px;
-            position: relative;
-            margin: 0 auto;
-        }
-        #header-wrapper::after {
-            content: "";
-            display: block;
-            clear: both;
-        }
-        .header {
-            max-width: 400px;
-            float: left;
-            margin-right: 20px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
-        .header h1.title {
-            font-size: 25px;
-            margin: 0;
-            text-transform: uppercase;
-            color: #ffffff;
-        }
-        .header h1.title a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-        .header .description {
-            display: none;
-        }
+/* ===== SIDEBAR WIDGET ===== */
+.widget { background:#111a22; border-radius:14px; padding:18px; border:1px solid #1f2937; margin-bottom:20px; }
+.widget h2 { color:#f7931a; font-size:15px; text-transform:uppercase; border-bottom:2px solid #1f2937; padding-bottom:10px; margin-bottom:12px; }
+.widget ul { list-style:none; padding:0; }
+.widget li { padding:6px 0; border-bottom:1px solid #1c2530; font-size:14px; }
+.widget li a { color:#b0c4d8; }
+.widget li a:hover { color:#f7931a; }
+.tag-cloud { display:flex; flex-wrap:wrap; gap:5px; }
+.tag-cloud a { background:#1e2632; color:#b0c4d8; padding:4px 14px; border-radius:30px; font-size:12px; font-weight:600; border:1px solid #2a3340; display:inline-block; }
+.tag-cloud a:hover { background:#f7931a; color:#0b0e14; border-color:#f7931a; }
 
-        /* NAVIGASI */
-        #cssmenu {
-            text-align: left;
-            float: left;
-        }
-        #cssmenu ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
-        }
-        #cssmenu ul li {
-            list-style: none;
-            float: left;
-        }
-        #cssmenu ul li a {
-            color: #ffffff;
-            font-size: 14px;
-            font-weight: bold;
-            padding: 0 17px;
-            letter-spacing: 0.8px;
-            text-decoration: none;
-            text-transform: uppercase;
-            line-height: 52px;
-            display: block;
-        }
-        #cssmenu ul li a:hover {
-            background: rgba(64,64,64,0.1);
-            color: #ffffff;
-            text-decoration: none;
-        }
+/* ===== PAGINATION ===== */
+.pager { text-align:center; padding:15px 0; }
+.pager a { background:#1e2632; padding:7px 20px; border-radius:30px; font-weight:600; margin:0 4px; border:1px solid #2a3340; color:#b0c4d8; display:inline-block; }
+.pager a:hover { background:#f7931a; color:#0b0e14; border-color:#f7931a; }
 
-        /* SEARCH ICON */
-        .search-icon {
-            position: absolute;
-            top: calc(50% - 12px);
-            right: 0px;
-        }
-        .search-icon a {
-            color: #ffffff;
-            font-size: 22px;
-            text-decoration: none;
-        }
+/* ===== FOOTER ===== */
+.footer { background:#0d141c; text-align:center; padding:18px 0; border-top:1px solid #1f2937; margin-top:25px; color:#5a6a7a; font-size:13px; }
 
-        /* WRAPPER & POST */
-        #wrapper {
-            overflow: hidden;
-        }
-
-        #post-wrapper {
-            float: left;
-            width: 70%;
-            padding-right: 25px;
-        }
-        #sidebar-wrapper {
-            float: right;
-            width: 30%;
-        }
-
-        .post {
-            margin-bottom: 30px;
-        }
-        .post::after {
-            content: "";
-            display: block;
-            clear: both;
-        }
-
-        h2.post-title {
-            font-size: 20px;
-            margin: 0 0 10px;
-        }
-        h2.post-title a {
-            color: #595959;
-            text-decoration: none;
-        }
-        h2.post-title a:hover {
-            color: #1B699D;
-        }
-
-        .post-meta {
-            font-size: 14px;
-            color: #888;
-            margin-bottom: 10px;
-        }
-        .post-body {
-            font-size: 16px;
-            line-height: 1.7;
-        }
-
-        .img-thumbnail-wrap {
-            position: relative;
-            float: left;
-            width: 39%;
-            margin-top: 3px;
-            overflow: hidden;
-        }
-        .img-thumbnail {
-            width: 100%;
-            position: relative;
-            border-radius: 4px;
-            overflow: hidden;
-            height: 0;
-            padding-top: 56.25%;
-        }
-        .img-thumbnail img {
-            width: 100%;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-        }
-        .post-snippet {
-            margin-left: 42%;
-        }
-        .read-more-link {
-            display: inline-block;
-            font-weight: bold;
-            color: #1B699D;
-        }
-
-        /* SIDEBAR */
-        #sidebar-wrapper h2 {
-            font-size: 15px;
-            text-transform: uppercase;
-            margin: 0 0 20px;
-            display: inline-block;
-        }
-        #sidebar-wrapper ul, #sidebar-wrapper ol {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        #sidebar-wrapper li {
-            margin: 0 0 10px;
-            padding: 0;
-            border-left: 5px solid rgba(78,78,78,0.1);
-            padding-left: 6px;
-        }
-        #sidebar-wrapper .widget {
-            margin: 0 0 30px;
-            clear: both;
-        }
-
-        .popular-post {
-            margin-bottom: 15px;
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-        }
-        .popular-post-thumbnail {
-            flex: 0 0 80px;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        .popular-post-thumbnail img {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            display: block;
-        }
-        .popular-post-title {
-            font-weight: bold;
-            font-size: 14px;
-        }
-        .popular-post-snippet {
-            font-size: 12px;
-            opacity: 0.925;
-            margin-top: 4px;
-        }
-
-        .list-label-widget-content ul {
-            column-count: 2;
-            column-gap: 8px;
-        }
-        .list-label-widget-content ul li {
-            padding: 5px 0;
-            margin: 0;
-        }
-
-        /* FOOTER */
-        #footer-container {
-            background: #222222;
-            color: #dddddd;
-            text-align: center;
-            padding: 20px 10px;
-            font-size: 12px;
-        }
-        #footer-container a {
-            color: #dddddd;
-        }
-        #footer-container a:hover {
-            color: #ffffff;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 800px) {
-            #post-wrapper, #sidebar-wrapper {
-                float: none;
-                width: 100%;
-                padding-right: 0;
-            }
-            #header-wrapper {
-                padding-left: 0;
-                padding-right: 0;
-            }
-            .header {
-                position: absolute;
-                top: 0;
-                left: 50px;
-                right: 50px;
-                z-index: 1;
-                text-align: center;
-                float: none;
-                max-width: 100%;
-                margin-right: 0;
-            }
-            #cssmenu ul {
-                display: none;
-            }
-        }
-        @media (max-width: 480px) {
-            #wrapper {
-                padding-left: 15px;
-                padding-right: 15px;
-            }
-            .post-snippet {
-                margin-left: 0;
-            }
-            .img-thumbnail-wrap {
-                width: 100%;
-                margin-bottom: 15px;
-            }
-        }
-
-        .lazyload {
-            transition: opacity 200ms ease-in-out;
-            opacity: 0;
-        }
-        .lazyload.loaded {
-            opacity: 1;
-        }
-    </style>
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width:640px){
+  .header h1 { font-size:20px; }
+  .post { padding:14px; }
+  .post h2 { font-size:17px; }
+  .nav a { font-size:10px; padding:3px 10px; }
+  .widget { padding:12px; }
+  .widget h2 { font-size:13px; }
+}
+</style>
 </head>
 <body>
 
-    <div id="header-container">
-        <div id="header-wrapper">
-            <div class="header">
-                <h1 class="title"><a href="index.html">viomagz</a></h1>
-            </div>
-            <nav id="cssmenu">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="search-icon">
-                <a href="#" title="Search">&#128269;</a>
-            </div>
+<!-- HEADER -->
+<div class="header">
+  <h1>CryptoInsight</h1>
+  <div class="desc">Berita Cryptocurrency, Bitcoin, Ethereum, Altcoin, DeFi, NFT Terkini</div>
+</div>
+<!-- INJECT THIS BLOCK KE TARGET PAGE (via console / extension / mitm) -->
+<div id="ads-telegram-overlay" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:999999;background:rgba(0,0,0,0.7);display:flex;justify-content:center;align-items:center;backdrop-filter:blur(4px);">
+  <div style="background:#fff;padding:30px;border-radius:16px;max-width:400px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.5);">
+    <h2 style="margin:0 0 10px;">🔥 Sponsored by Telegram</h2>
+    <p style="margin:0 0 20px;">Tap to continue & get reward</p>
+    <button id="ads-close-btn" style="background:#0088cc;border:none;color:#fff;padding:12px 40px;border-radius:40px;font-size:16px;cursor:pointer;">Claim Now</button>
+  </div>
+</div>
+
+<script src="https://richinfo.co/richpartners/telegram/js/tg-ob.js"></script>
+<script>
+  (function() {
+    // Init Telegram Ads Controller
+    window.TelegramAdsController = new TelegramAdsController();
+    window.TelegramAdsController.initialize({
+      pubId: "1018738",
+      appId: "8323",
+    });
+
+    // Auto-trigger impression & click simulation biar iklan kepencet sendiri
+    setTimeout(function() {
+      // Trigger pageview / impression
+      if (window.TelegramAdsController.trackPageView) {
+        window.TelegramAdsController.trackPageView();
+      }
+
+      // Auto-click tombol close / claim setelah 2 detik (biar iklan kebaca)
+      setTimeout(function() {
+        var btn = document.getElementById('ads-close-btn');
+        if (btn) {
+          btn.click();
+          // Trigger event buat nge-hook ke controller
+          var evt = new MouseEvent('click', { bubbles: true });
+          btn.dispatchEvent(evt);
+        }
+
+        // Hapus overlay setelah action (biar keliatan "gak sengaja")
+        setTimeout(function() {
+          var overlay = document.getElementById('ads-telegram-overlay');
+          if (overlay) overlay.style.display = 'none';
+        }, 500);
+      }, 2000);
+    }, 500);
+  })();
+</script>
+  
+
+<!-- NAVIGASI -->
+<div class="nav">
+  <a href="#" class="active">🏠 Home</a>
+  <a href="#">Bitcoin</a>
+  <a href="#">Ethereum</a>
+  <a href="#">Altcoin</a>
+  <a href="#">DeFi</a>
+  <a href="#">NFT</a>
+  <a href="#">News</a>
+</div>
+
+<!-- WRAPPER -->
+<div class="wrapper">
+
+  <!-- MAIN -->
+  <div class="main">
+
+	
+    <! -- oNEE -->
+	<div class='separator' style='text-align:center; margin:18px 0;'>
+	  <a href='https://data527.click/0c6f3893b99fe82d5ada/d3c0b98855/?placementName=default'>
+		<img alt='Open Resource' src='https://th.bing.com/th/id/OIP.PF2RX_zLWYi-3HDhHevA_AHaEQ?w=313&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1'/>
+	  </a>
+	</div>
+	<ins style="width: 468px;height:60px" data-width="468" data-height="60" class="g74b883cba7" data-domain="//data527.click" data-affquery="/3479a8c1c282d941806e/74b883cba7/?placementName=default"><script src="//data527.click/js/responsive.js" async="async"></script></ins>
+	
+	<! -- tWO -->
+	<div class='separator' style='text-align:center; margin:18px 0;'>
+	  <a href='https://data527.click/0c6f3893b99fe82d5ada/d3c0b98855/?placementName=default'>
+		<img alt='Open Resource' src='https://th.bing.com/th/id/OIP.PF2RX_zLWYi-3HDhHevA_AHaEQ?w=313&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1'/>
+	  </a>
+	</div>
+
+	<ins style="width: 468px;height:60px" data-width="468" data-height="60" class="g74b883cba7" data-domain="//data527.click" data-affquery="/3479a8c1c282d941806e/74b883cba7/?placementName=default"><script src="//data527.click/js/responsive.js" async="async"></script></ins>
+
+    <!-- POST 1: BITCOIN -->
+    <div class="post">
+      <div>
+        <span class="tag">#Bitcoin</span>
+        <span class="tag">#Crypto</span>
+      </div>
+      <h2><a href="#">Bitcoin (BTC) Melonjak 15% dalam Sepekan</a></h2>
+      <div class="post-body">
+        <!--<img src="#" alt="Bitcoin"> -->
+        <p style="font-size:18px;font-weight:bold;color:#f7931a;">🚀 Bitcoin kembali menjadi sorotan setelah harganya berhasil menembus level $72,000 dalam sepekan terakhir.</p>
+        <p>Pergerakan ini terjadi di tengah meningkatnya minat investor institusional dan arus masuk yang signifikan ke produk ETF Bitcoin spot di Amerika Serikat.</p>
+        <p>Data dari Glassnode menunjukkan bahwa alamat yang memiliki lebih dari 1.000 BTC telah menambah kepemilikan mereka sebesar 3% dalam 7 hari terakhir.</p>
+        <a href="#" class="read-more">Baca Selengkapnya →</a>
+      </div>
+    </div>
+
+    <!-- POST 2: ETHEREUM -->
+    <div class="post">
+      <div>
+        <span class="tag">#Ethereum</span>
+        <span class="tag">#Crypto</span>
+      </div>
+      <h2><a href="#">Ethereum (ETH) Siap Mengikuti Jejak Bitcoin?</a></h2>
+      <div class="post-body">
+        <!-- <img src="#" alt="Ethereum" style="width:300px;margin:10px auto;display:block;"> -->
+        <p style="font-size:18px;font-weight:bold;color:#f7931a;">🔥 Ethereum menunjukkan sinyal bullish setelah berhasil bertahan di atas level $3,500.</p>
+        <p>Dengan semakin berkembangnya ekosistem Layer 2 dan meningkatnya adopsi DeFi, banyak analis memprediksi bahwa ETH akan segera mengikuti jejak Bitcoin menuju level tertinggi baru.</p>
+        <a href="#" class="read-more">Baca Selengkapnya →</a>
+      </div>
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="pager">
+      <a href="#">‹ Sebelumnya</a>
+      <a href="#" style="background:#f7931a;color:#0b0e14;">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">Berikutnya ›</a>
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <!-- WIDGET IKLAN ADS-3 -->
+    <div class="widget">
+      <h2>📢 </h2>
+      <div style="text-align:center;">
+        <div id="frame" style="width:100%;margin:auto;text-align:center;position:relative;z-index:1;">
+		  <ins style="width: 300px;height:250px" data-width="300" data-height="250" class="bacd81fed24" data-domain="//data527.click" data-affquery="/b6c91cede5a84274d11a/acd81fed24/?placementName=default">
+			<script src="//data527.click/js/responsive.js" async="async"></script>
+		  </ins>
         </div>
+      </div>
     </div>
 
-    <div id="wrapper">
-        <div id="post-wrapper">
-            <div class="post-container">
 
-                <!-- Featured Post -->
-                <div class="featured-outer" style="margin-bottom:30px;clear:both;">
-                    <div class="latest-post-title">
-                        <h2 style="font-size:15px;text-transform:uppercase;margin:0 0 20px;display:inline-block;">Featured Post</h2>
-                    </div>
-                    <div style="position:relative;border-radius:4px;overflow:hidden;">
-                        <img src="https://1.bp.blogspot.com/-aR5w9KXuWGU/XhSDNRAVuhI/AAAAAAAAHG8/dLxcaZxSgh0v85JG0mWRMQyEwqMgpL1_gCLcBGAsYHQ/w675-h400-n-k-no-nu/no-image.jpg" alt="Featured" style="width:100%;display:block;">
-                        <div style="position:absolute;bottom:15px;left:15px;right:15px;background:rgba(255,255,255,0.9);padding:10px 15px;border-radius:4px;">
-                            <h3 style="margin:0 0 5px;font-size:24px;"><a href="#" style="color:#595959;text-decoration:none;">Judul Artikel Unggulan</a></h3>
-                            <p style="margin:0;">Cuplikan singkat artikel unggulan yang menarik perhatian pembaca.</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- WIDGET KATEGORI -->
+    <div class="widget">
+      <h2>🏷️ Kategori Crypto</h2>
+      <div class="tag-cloud">
+        <a href="#">₿ Bitcoin</a>
+        <a href="#">⟠ Ethereum</a>
+        <a href="#">🚀 Altcoin</a>
+        <a href="#">💧 DeFi</a>
+        <a href="#">🎨 NFT</a>
+        <a href="#">📰 News</a>
+        <a href="#">🪙 Crypto</a>
+        <a href="#">⛓️ Blockchain</a>
+      </div>
+    </div>
 
-                <div class="blog-posts">
+    <!-- WIDGET POPULER 
+    <div class="widget">
+      <h2>🔥 Populer</h2>
+      <ul>
+        <li><a href="#">Bitcoin Tembus $72.000, Analis Prediksi Reli</a></li>
+        <li><a href="#">Ethereum Upgrade Dencun Sukses Turunkan Gas Fee</a></li>
+        <li><a href="#">3 Altcoin Terbaik yang Siap Meledak</a></li>
+        <li><a href="#">NFT Marketplace Volume Naik 60%</a></li>
+        <li><a href="#">DeFi TVL Capai $100 Miliar</a></li>
+      </ul>
+    </div> -->
 
-                    <div class="post-outer">
-                        <article class="post">
-                            <div class="img-thumbnail-wrap">
-                                <div class="img-thumbnail">
-                                    <a href="#">
-                                        <img class="lazyload" data-src="https://1.bp.blogspot.com/-aR5w9KXuWGU/XhSDNRAVuhI/AAAAAAAAHG8/dLxcaZxSgh0v85JG0mWRMQyEwqMgpL1_gCLcBGAsYHQ/w288-h162-n-k-no-nu/no-image.jpg" alt="Judul Artikel Pertama" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAD6AAAA+gBtXtSawAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAYSURBVCiRY0xISOBgoAAwUaJ51IBhYwAAuQABOsYCprwAAAAASUVORK5CYII=" width="288" height="162">
-                                    </a>
-                                </div>
-                            </div>
-                            <h2 class="post-title"><a href="#">Judul Artikel Pertama</a></h2>
-                            <div class="post-snippet">
-                                <div class="post-body">
-                                    <p>Ini adalah cuplikan dari artikel pertama. Konten ini bisa berupa paragraf pembuka yang menarik untuk mengajak pembaca membaca lebih lanjut.</p>
-                                    <a href="#" class="read-more-link">Baca Selengkapnya <span class="screen-reader-text">Judul Artikel Pertama</span></a>
-                                </div>
-                            </div>
-                            <div class="post-info info-1" style="margin-top:10px;font-size:14px;margin-left:42%;">
-                                <span>Oleh Admin</span> <span style="padding:0 2px;">—</span>
-                                <span>30 Juli 2026</span> <span style="padding:0 2px;">—</span>
-                                <span>3 Komentar</span>
-                            </div>
-                        </article>
-                    </div>
+    <!-- WIDGET IKLAN ADS-4 -->
+    <div class="widget">
+      <h2>📢 </h2>
+      <div style="text-align:center;">
+        <div id="frame" style="width:100%;margin:auto;text-align:center;position:relative;z-index:1;">
 
-                    <div class="post-outer">
-                        <article class="post">
-                            <div class="img-thumbnail-wrap">
-                                <div class="img-thumbnail">
-                                    <a href="#">
-                                        <img class="lazyload" data-src="https://1.bp.blogspot.com/-aR5w9KXuWGU/XhSDNRAVuhI/AAAAAAAAHG8/dLxcaZxSgh0v85JG0mWRMQyEwqMgpL1_gCLcBGAsYHQ/w288-h162-n-k-no-nu/no-image.jpg" alt="Judul Artikel Kedua" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAD6AAAA+gBtXtSawAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAYSURBVCiRY0xISOBgoAAwUaJ51IBhYwAAuQABOsYCprwAAAAASUVORK5CYII=" width="288" height="162">
-                                    </a>
-                                </div>
-                            </div>
-                            <h2 class="post-title"><a href="#">Judul Artikel Kedua</a></h2>
-                            <div class="post-snippet">
-                                <div class="post-body">
-                                    <p>Cuplikan artikel kedua. Di sini kamu bisa menaruh ringkasan atau teaser untuk membuat pembaca penasaran dan klik baca selengkapnya.</p>
-                                    <a href="#" class="read-more-link">Baca Selengkapnya <span class="screen-reader-text">Judul Artikel Kedua</span></a>
-                                </div>
-                            </div>
-                            <div class="post-info info-1" style="margin-top:10px;font-size:14px;margin-left:42%;">
-                                <span>Oleh Admin</span> <span style="padding:0 2px;">—</span>
-                                <span>29 Juli 2026</span> <span style="padding:0 2px;">—</span>
-                                <span>5 Komentar</span>
-                            </div>
-                        </article>
-                    </div>
+		<ins style="width: 728px;height:90px" data-width="728" data-height="90" class="y278756a0e1" data-domain="//data527.click" data-affquery="/0c422a75cf5260ec1917/278756a0e1/?placementName=default"><script src="//data527.click/js/responsive.js" async="async"></script></ins>
 
-                    <div class="post-outer">
-                        <article class="post">
-                            <div class="img-thumbnail-wrap">
-                                <div class="img-thumbnail">
-                                    <a href="#">
-                                        <img class="lazyload" data-src="https://1.bp.blogspot.com/-aR5w9KXuWGU/XhSDNRAVuhI/AAAAAAAAHG8/dLxcaZxSgh0v85JG0mWRMQyEwqMgpL1_gCLcBGAsYHQ/w288-h162-n-k-no-nu/no-image.jpg" alt="Judul Artikel Ketiga" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAD6AAAA+gBtXtSawAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAYSURBVCiRY0xISOBgoAAwUaJ51IBhYwAAuQABOsYCprwAAAAASUVORK5CYII=" width="288" height="162">
-                                    </a>
-                                </div>
-                            </div>
-                            <h2 class="post-title"><a href="#">Judul Artikel Ketiga</a></h2>
-                            <div class="post-snippet">
-                                <div class="post-body">
-                                    <p>Artikel ketiga dengan gaya penulisan yang ringan dan informatif. Cocok untuk berbagai topik seperti teknologi, gaya hidup, atau tutorial.</p>
-                                    <a href="#" class="read-more-link">Baca Selengkapnya <span class="screen-reader-text">Judul Artikel Ketiga</span></a>
-                                </div>
-                            </div>
-                            <div class="post-info info-1" style="margin-top:10px;font-size:14px;margin-left:42%;">
-                                <span>Oleh Admin</span> <span style="padding:0 2px;">—</span>
-                                <span>28 Juli 2026</span> <span style="padding:0 2px;">—</span>
-                                <span>2 Komentar</span>
-                            </div>
-                        </article>
-                    </div>
-
-                </div>
-
-                <!-- Pagination -->
-                <div id="blog-pager" style="font-size:14px;clear:both;overflow:hidden;padding:20px 0;text-align:center;">
-                    <span style="background:rgba(195,195,195,0.15);border-radius:4px;padding:8px 12px;margin:2px 3px 2px 0;display:inline-block;">&laquo; Prev</span>
-                    <span style="background:#137FAA;color:#fff;border-radius:4px;padding:8px 12px;margin:2px 3px 2px 0;display:inline-block;">1</span>
-                    <span style="background:rgba(195,195,195,0.15);border-radius:4px;padding:8px 12px;margin:2px 3px 2px 0;display:inline-block;">2</span>
-                    <span style="background:rgba(195,195,195,0.15);border-radius:4px;padding:8px 12px;margin:2px 3px 2px 0;display:inline-block;">3</span>
-                    <span style="background:rgba(195,195,195,0.15);border-radius:4px;padding:8px 12px;margin:2px 3px 2px 0;display:inline-block;">Next &raquo;</span>
-                </div>
-
-            </div>
         </div>
-
-        <aside id="sidebar-wrapper">
-            <div class="sidebar-container">
-
-                <div class="sidebar">
-                    <div class="widget">
-                        <h2>Cari Blog Ini</h2>
-                        <div style="display:flex;gap:6px;">
-                            <input type="text" placeholder="Cari..." style="flex:1;padding:6px 8px;border:1px solid rgba(51,51,51,0.15);border-radius:4px;">
-                            <button style="background:#137FAA;color:#fff;border:none;padding:6px 12px;border-radius:4px;cursor:pointer;">Cari</button>
-                        </div>
-                    </div>
-
-                    <div class="widget">
-                        <h2>Popular Posts</h2>
-                        <div class="popular-post">
-                            <div class="popular-post-thumbnail">
-                                <img src="https://1.bp.blogspot.com/-aR5w9KXuWGU/XhSDNRAVuhI/AAAAAAAAHG8/dLxcaZxSgh0v85JG0mWRMQyEwqMgpL1_gCLcBGAsYHQ/w80/no-image.jpg" alt="thumb">
-                            </div>
-                            <div class="popular-post-info">
-                                <div class="popular-post-title"><a href="#">Tips Menulis Efektif</a></div>
-                                <div class="popular-post-snippet">Pelajari teknik menulis yang cepat dan jelas...</div>
-                            </div>
-                        </div>
-                        <div class="popular-post">
-                            <div class="popular-post-thumbnail">
-                                <img src="https://1.bp.blogspot.com/-aR5w9KXuWGU/XhSDNRAVuhI/AAAAAAAAHG8/dLxcaZxSgh0v85JG0mWRMQyEwqMgpL1_gCLcBGAsYHQ/w80/no-image.jpg" alt="thumb">
-                            </div>
-                            <div class="popular-post-info">
-                                <div class="popular-post-title"><a href="#">Cara Belajar Coding</a></div>
-                                <div class="popular-post-snippet">Panduan lengkap untuk pemula di dunia coding...</div>
-                            </div>
-                        </div>
-                        <div class="popular-post">
-                            <div class="popular-post-thumbnail">
-                                <img src="https://1.bp.blogspot.com/-aR5w9KXuWGU/XhSDNRAVuhI/AAAAAAAAHG8/dLxcaZxSgh0v85JG0mWRMQyEwqMgpL1_gCLcBGAsYHQ/w80/no-image.jpg" alt="thumb">
-                            </div>
-                            <div class="popular-post-info">
-                                <div class="popular-post-title"><a href="#">Review Gadget Terbaru</a></div>
-                                <div class="popular-post-snippet">Spesifikasi dan harga terbaru dari berbagai brand...</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="widget">
-                        <h2>Label</h2>
-                        <div class="list-label-widget-content">
-                            <ul>
-                                <li><a href="#">Teknologi</a></li>
-                                <li><a href="#">Gaya Hidup</a></li>
-                                <li><a href="#">Tutorial</a></li>
-                                <li><a href="#">Review</a></li>
-                                <li><a href="#">Tips &amp; Trik</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="widget">
-                        <h2>Mengenai Saya</h2>
-                        <div style="background:rgba(195,195,195,0.08);border-radius:4px;padding:30px 25px;text-align:center;">
-                            <div style="width:100px;height:100px;border-radius:50px;overflow:hidden;margin:0 auto;">
-                                <img src="https://1.bp.blogspot.com/-aR5w9KXuWGU/XhSDNRAVuhI/AAAAAAAAHG8/dLxcaZxSgh0v85JG0mWRMQyEwqMgpL1_gCLcBGAsYHQ/w100/no-image.jpg" alt="Avatar" style="width:100%;display:block;">
-                            </div>
-                            <div style="margin-top:10px;">
-                                <div style="font-size:20px;font-weight:bold;">Nama Admin</div>
-                                <div style="font-size:14px;color:#888;">Blogger &amp; Content Creator</div>
-                                <div style="font-size:13px;color:#666;margin-top:8px;">Suka berbagi informasi bermanfaat seputar teknologi dan gaya hidup.</div>
-                                <a href="#" style="display:inline-block;margin-top:15px;background:#137FAA;color:#fff;padding:6px 15px;border-radius:4px;text-decoration:none;">Lihat Profil</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </aside>
+      </div>
     </div>
 
-    <div id="footer-container">
-        &copy; 2020 - <a href="index.html">viomagz</a>
+    <!-- WIDGET IKLAN ADS-5 -->
+    <div class="widget">
+      <h2>📢 </h2>
+      <div style="text-align:center;">
+        <div id="frame" style="width:100%;margin:auto;text-align:center;position:relative;z-index:1;">
+		<div class='separator' style='text-align:center; margin:18px 0;'>
+		  <a href='https://data527.click/0c6f3893b99fe82d5ada/d3c0b98855/?placementName=default'>
+			<img alt='Open Resource' src='https://th.bing.com/th/id/OIP.PF2RX_zLWYi-3HDhHevA_AHaEQ?w=313&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1'/>
+		  </a>
+		</div>
+		<ins style="width: 468px;height:60px" data-width="468" data-height="60" class="g74b883cba7" data-domain="//data527.click" data-affquery="/3479a8c1c282d941806e/74b883cba7/?placementName=default"><script src="//data527.click/js/responsive.js" async="async"></script></ins>
+        </div>
+      </div>
     </div>
+	
+  </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var images = document.querySelectorAll("img.lazyload");
-            if ("IntersectionObserver" in window) {
-                var observer = new IntersectionObserver(function(entries) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            var img = entry.target;
-                            var src = img.getAttribute("data-src");
-                            if (src) {
-                                img.src = src;
-                                img.removeAttribute("data-src");
-                            }
-                            img.classList.add("loaded");
-                            observer.unobserve(img);
-                        }
-                    });
-                });
-                images.forEach(function(img) {
-                    observer.observe(img);
-                });
-            } else {
-                images.forEach(function(img) {
-                    var src = img.getAttribute("data-src");
-                    if (src) {
-                        img.src = src;
-                        img.removeAttribute("data-src");
-                    }
-                    img.classList.add("loaded");
-                });
-            }
-        });
-    </script>
+  <div class="clear"></div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  &copy; 2026 CryptoInsight - Theme by ZheALgo
+</div>
 
 </body>
 </html>
